@@ -1,6 +1,7 @@
 <?php
 $paragrafo = "Siete tutti sciocchi e maleducati e infami non potete fare così";
-$censura = 
+$censura = ($_GET["sciocchi"],'***',$paragrafo);
+var_dump($censura);
  ?>
 
  <!DOCTYPE html>
@@ -11,6 +12,7 @@ $censura =
    </head>
    <body>
      <p><?php echo $paragrafo;?></p>
+     <p><?php echo strlen($paragrafo); ?></p>
 
    </body>
  </html>
