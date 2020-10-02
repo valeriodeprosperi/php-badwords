@@ -1,6 +1,6 @@
 <?php
 $paragrafo = "Siete tutti sciocchi e maleducati e infami non potete fare così";
-$censura = ($_GET["sciocchi"],'***',$paragrafo);
+$censura = str_replace($_GET["sciocchi"],'***',$paragrafo);
 var_dump($censura);
  ?>
 
@@ -11,8 +11,9 @@ var_dump($censura);
      <title>php-badwords</title>
    </head>
    <body>
-     <p><?php echo $paragrafo;?></p>
-     <p><?php echo strlen($paragrafo); ?></p>
+     <p><?php echo $paragrafo ?></p>
+     <p>lunghezza paragrafo<?php echo strlen($paragrafo) ?></p>
+     <p><?php echo $censura ?></p>
 
    </body>
  </html>
